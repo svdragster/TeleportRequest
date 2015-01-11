@@ -1,0 +1,5 @@
+;svdragster.dtdns.net
+name=TeleportRequest
+main-class=de.svdragster.teleportrequest.TeleportRequest
+author=svdragster
+version=1.0
