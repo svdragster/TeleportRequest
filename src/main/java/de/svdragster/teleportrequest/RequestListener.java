@@ -5,10 +5,15 @@ import net.canarymod.hook.player.DisconnectionHook;
 import net.canarymod.plugin.PluginListener;
 
 public class RequestListener implements PluginListener {
+	
+	private TeleportRequest tpr;
+	
+	public RequestListener(TeleportRequest tpr){
+		this.tpr = tpr;
+	}
 
 	@HookHandler
 	public void onLogout(DisconnectionHook hook) {
-		RequestCommands commands = new RequestCommands();
-		commands.removeRequest(hook.getPlayer());
+		tpr.removeRequest(hook.getPlayer());
 	}
 }
